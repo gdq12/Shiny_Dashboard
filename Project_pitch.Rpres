@@ -1,0 +1,54 @@
+<style>
+.small-code pre code {
+  font-size: 1em;
+}
+</style>
+
+Supermarket Sales
+========================================================
+author: Gloria
+date: September 8, 2020
+autosize: true
+
+Myanmar Supermarket Sales
+========================================================
+
+There are many factors that must be taken into account when looking at consumer logistics and determining a businesses revenue from it. Such factors are including but not limited to: 
+
+* location of purchase
+* product category
+* membership to store 
+* product unit price
+* number of items bought
+* payment method
+* customer rating 
+* customer gender
+
+A little about the Dashboard
+========================================================
+
+Here, supermarket sales were retrieved from [kaggle](https://www.kaggle.com/aungpyaeap/supermarket-sales) and used to create a shiny dashboard to observe how these factors influence revenue trends in the a 3 month period (January to March 2019). This is all in the second tab.
+
+
+Predictive modeling is used in the third tab to predict total spending at a supermarket by a customer based on the previously mentioned factors. With every update of the different drop boxes and sliders, prediction is updated in the back-end and resulting in an update predicted value in the dashboard. 
+
+Glimpse into Dashboard Tab
+========================================================
+class: small-code
+
+```{r, messages='hide', warning=F, fig.height=5}
+library(leaflet)
+
+myanmar_df=data.frame(City=c('Mandalay', 'Naypyitaw', 'Yangon'),
+                          lat=c(21.9588, 19.7633, 16.8409),
+                          lng=c(96.0891, 96.0785, 96.1735))
+
+myanmar_df %>% leaflet() %>% addTiles() %>% addMarkers(label=~City)
+```
+
+Predictor Tab
+========================================================
+
+<img src="prediction_tab.png" height="400px" width="1000px" />
+
+This is a screen shot of the prediction revenue tab of the [dashboard](https://gdq12.shinyapps.io/shiny_dashboard/). If you want to have a look at the app.R file used to generate the dash board have a look at the [github repo]().

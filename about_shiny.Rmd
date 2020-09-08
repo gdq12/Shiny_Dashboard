@@ -1,0 +1,31 @@
+---
+title: 'Dashboard Overview'
+output: html_document
+---
+
+![](market.png)
+
+This dashboard was created as a final project for the [Developing Data Products](https://www.coursera.org/learn/data-products) and as a way to explore R's capacity to develop data products (very impressive by the way!). The data used for this dashboard came from [Kaggle](https://www.kaggle.com/aungpyaeap/supermarket-sales) and it consists of supermarket sales from 3 cities in Myanmar, a country in Asia. There are 2 tabs in this dashboard: 1 named un-originally dashboard and consists of general exploratory graphs, and the second tab is predictive revenue which employs a regression model to predict supermarket revenue from 1 customer based on multiple factors. 
+
+#### Dashbord Tab
+
+* takes a look at the impact of Gender, City and Product line and its impact on Revenue
+
+* Plotly graphs were used here, with relayout buttons added to stack and unstack bar graphs 
+
+* The last bottom right plotly graph uses an update button to add a filter to the timeseries data. The filter used is the moving average from the forecast package in R. This is to have a cleaner look at rating fluctuations with time. Can also isolate individual city  timeseries by tapping on the cities that want temporarily removed from graph. 
+
+* Leaflet is used here to provide a visual of the 3 cities geographical locations. 
+
+
+#### Predicting Revenue Tab
+
+* Predicts the amount a customer will pay for their visit to the supermarket
+
+* Based on City, product category, membership, product unit price, number of items bought, payment method, customer rating and customer gender. 
+
+* The final amount the customer is predicted to pay in Burmese Kyat is continuously calculated with every parameter change. 
+
+* Linear regression (lm) function was used to build the model. 
+
+Have a go in this tab. Play around with the different variables to see which one impacts total spending the most. 
