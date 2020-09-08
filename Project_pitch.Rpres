@@ -51,4 +51,4 @@ Predictor Tab
 <font size = "5px">
 <img src="prediction_tab.png" height="400px" width="1000px" />
 
-This is a screen shot of the prediction revenue tab of the [dashboard](https://gdq12.shinyapps.io/shiny_dashboard/). **To take a look at the dashboard, best to open in a simple web browser like safari (issues with rendering graphs due to perhaps java script).** If you want to have a look at the app.R file used to generate the dash board have a look at the [github repo](https://github.com/gdq12/Shiny_Dashboard/blob/master/app.R).
+This is a screen shot of the prediction revenue tab of the [dashboard](https://gdq12.shinyapps.io/shiny_dashboard/). **To take a look at the dashboard, best to open in a simple web browser like safari (issues with rendering graphs due to perhaps java script).** If you want to have a look at the app.R (ui and server.R combo) file used to generate the dash board, have a look in [github](https://github.com/gdq12/Shiny_Dashboard/blob/master/app.R).
