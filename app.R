@@ -8,6 +8,7 @@ library(forecast)
 library(leaflet)
 library(knitr)
 library(rmarkdown)
+library(shinyjs)
 
 ui=dashboardPage(
     dashboardHeader(title='Supermarket Sales'),
@@ -20,6 +21,7 @@ ui=dashboardPage(
         )
     ),
     dashboardBody(
+        useShinyjs(),
         tabItems(
             tabItem(tabName='About',
                 box(uiOutput('about_shiny'),
@@ -73,7 +75,7 @@ ui=dashboardPage(
                 )
             )
         )
-    )
+    ),
 )
 
 server=function(input, output){
